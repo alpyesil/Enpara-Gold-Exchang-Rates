@@ -32,6 +32,35 @@ cd enpara-gold-exchange-rates
 dotnet run
 ```
 
+## Sample Output
+```bash
+The application provides output in the following format:
+
+{
+  "USD": {
+    "BuyRate": 26.94,
+    "SellRate": 27.87,
+    "Spread": 0.93
+  },
+  "EUR": {
+    "BuyRate": 29.0514,
+    "SellRate": 30.5107,
+    "Spread": 1.4592
+  },
+  "Gold (grams)": {
+    "BuyRate": 1636.085,
+    "SellRate": 1738.9363,
+    "Spread": 102.8514
+  },
+  "EUR/USD Pair": {
+    "BuyRate": 1.0784,
+    "SellRate": 1.0947,
+    "Spread": 0.0164
+  }
+}
+
+```
+
 ## Explanation
 
 ```bash
