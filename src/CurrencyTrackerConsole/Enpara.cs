@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text.RegularExpressions;
@@ -10,7 +10,7 @@ namespace CurrencyTrackerConsole
         private Dictionary<string, Dictionary<string, double>> enpara =
             new Dictionary<string, Dictionary<string, double>>();
 
-        private int virguldenSonra = 4;
+        private int afterDecimal = 4;
         private string[] items = { "USD", "EUR", "Gold (grams)", "EUR/USD Pair" };
         private string enparaURL = "https://www.qnbfinansbank.enpara.com/hesaplar/doviz-ve-altin-kurlari";
 
@@ -43,7 +43,7 @@ namespace CurrencyTrackerConsole
 
         private double GetNumberOfDecimals(double value)
         {
-            return Math.Round(value, virguldenSonra);
+            return Math.Round(value, afterDecimal);
         }
 
         private double ConvertToDecimal(string value)
@@ -70,7 +70,7 @@ namespace CurrencyTrackerConsole
         {
             if (value >= 0 && value <= 6)
             {
-                virguldenSonra = value;
+                afterDecimal = value;
                 enpara.Clear();
             }
         }
